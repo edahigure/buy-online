@@ -17,3 +17,5 @@ luz= Category.create(name: "luz", icon: icon, user_id: user.id)
 
 
 expense_luz =ExpenseCategory.create(amount: 354.3, expense_id: expense.id, category_id: luz.id )
+
+rails generate migration add_role_to_users role:string
