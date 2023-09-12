@@ -1,0 +1,19 @@
+
+rails new budget-app --database=postgresql
+
+rails generate scaffold User name:string
+rails generate scaffold Expense name:string user:references
+rails generate scaffold Category name:string icon:string user:references 
+
+rails generate scaffold ExpenseCategory amount:decimal expense:references category:references
+
+
+
+user = User.create(name: "Tom")
+expense = Expense.create(name: "pago bimestral", user_id: user.id )
+
+icon="https://play-lh.googleusercontent.com/7UppiZcZTNBInAJzU-XG8EpGeU3BlLVJM9LoJTaWiVamvguplwUFMNUg_92lk-0z4g"
+luz= Category.create(name: "luz", icon: icon, user_id: user.id)
+
+
+expense_luz =ExpenseCategory.create(amount: 354.3, expense_id: expense.id, category_id: luz.id )
