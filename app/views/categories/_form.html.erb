@@ -32,15 +32,11 @@
     </div>
   <% end %>
 
-  <div class="form-outline">
+  
   <%= form.text_field :name , placeholder:"Category name",class:"form-control item"%>
-  </div>
-
-
-  <div>
-    <%= form.text_field :icon, placeholder: "Icon URL",class:"form-control item" %>
-  </div>
-
+  
+  <%= form.text_field :icon, placeholder: "Icon URL",class:"form-control item" %>
+  
   <div>
     <%= form.submit "Add" ,class:"item" %>
   </div>

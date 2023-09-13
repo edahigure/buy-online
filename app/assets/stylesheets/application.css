@@ -89,8 +89,6 @@ body {
   margin: 12px;
   background-color: white;
   height: 50px;
-  border-radius: 10px;
-
 }
 
 .category-icon {
@@ -106,6 +104,16 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #eff2f1;
+
+}
+
+.container-column-white {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: white;
+  padding: 12px;
+  margin: 12px;
 }
 
 

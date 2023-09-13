@@ -4,10 +4,8 @@ class ExpensesController < ApplicationController
   # GET /expenses or /expenses.json
   def index
     category_id=params[:category_id]
-    category = Category.find(category_id)
-    @expenses = category.expense_categories
-    
-    
+    @category = Category.find(category_id)
+    @expenses = @category.recent_payments
     
   end
 
@@ -16,6 +14,8 @@ class ExpensesController < ApplicationController
 
   # GET /expenses/new
   def new
+    category_id=params[:category_id]
+    @category = Category.find(category_id)
     @expense = Expense.new
   end
 
@@ -24,16 +24,29 @@ class ExpensesController < ApplicationController
 
   # POST /expenses or /expenses.json
   def create
+    
     @expense = Expense.new(expense_params)
 
+    puts "Entering the create method"
+    puts @expense.name
+    puts @expense.amount
+    @expense.user_id = current_user.id
+    
+
+    
     respond_to do |format|
       if @expense.save
-        format.html { redirect_to expense_url(@expense), notice: 'Expense was successfully created.' }
+        puts "expense_id: #{@expense.id}"
+        puts "category_id: #{params[:category_id]}"
+        ExpenseCategory.create( expense_id: @expense.id, category_id: params[:category_id] )
+       
+        format.html { redirect_to category_expenses_url(params[:category_id]), notice: 'Expense was successfully created.' }
         format.json { render :show, status: :created, location: @expense }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @expense.errors, status: :unprocessable_entity }
       end
+      
     end
   end
 
@@ -69,6 +82,6 @@ class ExpensesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def expense_params
-    params.require(:expense).permit(:name, :user_id)
+    params.require(:expense).permit(:name, :amount)
   end
 end
