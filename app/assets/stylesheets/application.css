@@ -82,9 +82,30 @@ body {
   width: 100% !important;
 }
 
-.category-item {
+.container-items{
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px;
+  background-color: white;
+  height: 50px;
+  border-radius: 10px;
+
+}
+
+.category-icon {
+  width: 50px;
+}
+
+.no-text-decoration {
+  text-decoration: none;
+  color: black;
+}
+
+.container-column-grey {
+  display: flex;
+  flex-direction: column;
+  background-color: #eff2f1;
 }
 
 

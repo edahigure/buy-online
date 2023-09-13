@@ -1,17 +1,16 @@
-<div id="<%= dom_id category %>" ,class="category-item">
-  <p>
-    <strong>Name:</strong>
-    <%= category.name %>
-  </p>
+<div id="<%= dom_id category %>" class="container-items">
+  
+  <div>
+    <img src = <%= category.icon %> alt="category icon" class="category-icon" >
+  </div>
 
-  <p>
-    <strong>Icon:</strong>
-    <img src = <%= category.icon %> alt="category icon" >
-  </p>
+  
+  <div>
+  <%= link_to category.name, category_expenses_path(category.id), class:"no-text-decoration" %>
+  </div>
 
-  <p>
-    <strong>User:</strong>
+  <div>
     <%= category.user_id %>
-  </p>
+  </div>
 
 </div>

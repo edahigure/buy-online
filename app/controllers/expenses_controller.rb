@@ -3,7 +3,12 @@ class ExpensesController < ApplicationController
 
   # GET /expenses or /expenses.json
   def index
-    @expenses = Expense.all
+    category_id=params[:category_id]
+    category = Category.find(category_id)
+    @expenses = category.expense_categories
+    
+    
+    
   end
 
   # GET /expenses/1 or /expenses/1.json
