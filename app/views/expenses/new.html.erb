@@ -1,9 +1,24 @@
-<h1>New expense</h1>
+<nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+<div class="container ">
+    
+    <a class="nav-link navbar-brand " href=<%= category_expenses_path(params[:category_id]) %> ><i class="fa-solid fa-arrow-left fa-xl"></i></i></a>  
+    <div class="main-font">New payment</div>
+    
+    <button class="navbar-toggler navbar-dark " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+            <%= link_to 'Logout', destroy_user_session_path, 'data-turbo-method': :delete%>
+            </li>
+        </ul>
+    </div>
+</div>
+</nav>
 
 <%= render "form", expense: @expense %>
 
 <br>
 
-<div>
-  <%= link_to "Back to expenses", expenses_path %>
-</div>
