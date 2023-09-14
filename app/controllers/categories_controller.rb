@@ -22,7 +22,7 @@ class CategoriesController < ApplicationController
     @category = Category.new(category_params)
     @category.user_id = current_user.id
 
-    flash[:alert] = "Here ok. "
+    flash[:alert] = 'Here ok. '
 
     respond_to do |format|
       if @category.save
