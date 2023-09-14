@@ -4,7 +4,7 @@ class Category < ApplicationRecord
   has_many :expenses, through: :expense_categories, dependent: :destroy
 
   def total_amount
-    expenses.sum { |expense| expense.amount  }
+    expenses.sum(&:amount)
   end
 
   def recent_payments
