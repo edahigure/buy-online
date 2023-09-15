@@ -3,6 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe Category, type: :model do
+  
   let!(:user) do
     User.create(name: 'Jose', email: 'edahigure@hotmail.com', role: 'user', password: 'qweqwe')
   end
@@ -10,6 +11,7 @@ RSpec.describe Category, type: :model do
   let(:icon) do 
     "https://play-lh.googleusercontent.com/7UppiZcZTNBInAJzU-XG8EpGeU3BlLVJM9LoJTaWiVamvguplwUFMNUg_92lk-0z4g"
   end
+
   let!(:luz) do     
     Category.create(name: "luz", icon: icon, user_id: user.id)
   end

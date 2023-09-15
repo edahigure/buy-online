@@ -64,5 +64,7 @@ end
 
 RSpec.configure do |config|
   config.include Devise::Test::IntegrationHelpers, type: :request
+  config.include Devise::Test::IntegrationHelpers, type: :feature
+
   # ... other RSpec configurations ...
 end
