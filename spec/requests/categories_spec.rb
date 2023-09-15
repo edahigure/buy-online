@@ -1,4 +1,4 @@
-#rspec ./spec/models/requests/categories_spec.rb
+# rspec ./spec/models/requests/categories_spec.rb
 require 'rails_helper'
 
 RSpec.describe 'Categories', type: :request do
