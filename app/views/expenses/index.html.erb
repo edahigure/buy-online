@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+<div class="container ">
+    
+    
+    <a class="nav-link navbar-brand " href=<%= categories_path %> ><i class="fa-solid fa-arrow-left fa-xl"></i></i></a>
+    <div class="main-font">Payment</div>
+    
+    <button class="navbar-toggler navbar-dark " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+            <%= link_to 'Logout', destroy_user_session_path, 'data-turbo-method': :delete%>
+            </li>
+        </ul>
+    </div>
+</div>
+</nav>
+
+<div class="container-column-grey">
+ 
+  <div class="container-items">
+  Total payment: <%= @category.total_amount %>
+  </div>
+  
+  <div class="container-items">
+    <img src = <%= @category.icon %> alt="category icon" class="category-icon" >
+    <%= link_to @category.name, category_expenses_path(@category.id), class:"no-text-decoration" %>
+  </div>
+
+  <div id="expenses" class="container-columns-expenses">
+    <% @expenses.each do |expense| %>    
+      <p >
+      <%= expense.name %> <%= expense.amount %> <%= expense.created_at.to_date %>  
+      </p>
+    <% end %>
+  </div>
+
+  <%= link_to 'New payment', new_category_expense_path(@category.id), class:"btn btn-success" %>
+
+
+</div>

@@ -1,0 +1,18 @@
+
+Hostname  dpg-ck1st07hdsdc73et98rg-a
+
+Port 5432
+
+Database budget_app_production_7e2y
+
+Username budget_app
+
+
+password   PwRlAfYuV6AQnogK5mm5u6pDONIrBhEp
+
+Internal Database URL  postgres://budget_app:PwRlAfYuV6AQnogK5mm5u6pDONIrBhEp@dpg-ck1st07hdsdc73et98rg-a/budget_app_production_7e2y
+
+
+External Database URL  postgres://budget_app:PwRlAfYuV6AQnogK5mm5u6pDONIrBhEp@dpg-ck1st07hdsdc73et98rg-a.oregon-postgres.render.com/budget_app_production_7e2y
+
+PSQL Command   PGPASSWORD=PwRlAfYuV6AQnogK5mm5u6pDONIrBhEp psql -h dpg-ck1st07hdsdc73et98rg-a.oregon-postgres.render.com -U budget_app budget_app_production_7e2y

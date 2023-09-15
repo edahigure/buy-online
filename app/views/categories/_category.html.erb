@@ -1,0 +1,16 @@
+<div id="<%= dom_id category %>" class="container-items">
+  
+  <div>
+    <img src = <%= category.icon %> alt="category icon" class="category-icon" >
+  </div>
+
+  
+  <div>
+  <%= link_to category.name, category_expenses_path(category.id), class:"no-text-decoration" %>
+  </div>
+
+  <div>
+    <%= category.total_amount %>
+  </div>
+
+</div>
