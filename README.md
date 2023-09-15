@@ -58,6 +58,44 @@ Ruby on Rails
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Prerequisites (an email account)
+
+in order to run this project you need:
+
+gem install rails
+
+To run this application you need an email account properly configured. You need the 2-step verification for your gmail account for example as is done here:
+
+https://help.warmupinbox.com/en/articles/4934806-configure-for-google-workplace-with-two-factor-authentication-2fa
+
+
+and also and App password, you can generete it in the following link
+
+https://myaccount.google.com/apppasswords?utm_source=google-account&utm_medium=myaccountsecurity&utm_campaign=tsv-settings&rapt=AEjHL4PWzrboEKqAJ1-uFiT_jc_JM7D04bZJ4RO6XgHr0kfA3EVo-zMEW8QSMS-wHxDfRHi83r9D_pwiNb9lH5DyMko0upx3EA
+
+
+Then you can change the password and email in the files  ./config/environments/development.rb 
+./config/environment.rb 
+with your account information:
+
+    user_name:      'edahigure@gmail.com',
+    password:       'iewencoweo3892',
+    domain:         'localhost:3000',
+    address:       'smtp.gmail.com',
+    port:          '587',
+    authentication:  "plain",
+    enable_starttls_auto: true
+
+and also line 29 of file ./config/environments/initializers/devise.rb 
+by
+config.mailer_sender = 'edahigure@gmail.com'    
+
+
+Watch this useful video to know how to configure an email confirmation in rails
+
+https://www.youtube.com/watch?v=sVJRkTxqlSQ
+
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
