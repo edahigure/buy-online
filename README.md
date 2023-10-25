@@ -26,17 +26,20 @@
 - [❓ FAQ](#faq)
 - [📝 License](#license)
 
-# 📖 Budget app 
+# 📖 Buy online  
 
-The Budget app is about building a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
+The Buy online app is an experiment in progress. The idea was to refactor my old Portfolio to be used with rails.
+So I am using a simple HTML file, and want to incoorporate a database for the information. I planned to use the portfolio interface,
+to display cards and info, to make an application to sell things online. This application is in progress and is the mixture of 
+the portfolio and the budget app of the capstone for ruby on rails.
 
 # live version
 
-[online version](https://budget-app-7tph.onrender.com/)
+not yet
 
 ## 🛠 Built With <a name="built-with"></a>
 
-Ruby on Rails
+Ruby on Rails and HTML
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -155,9 +158,7 @@ and put the url of your localhost
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- New styles.
-- More calculations on budgets
-- Make real payments and money transfer
+- to sell things online.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
